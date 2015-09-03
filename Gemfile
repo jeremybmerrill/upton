@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
-gem "rest-client"
+gem "rest-client", "~> 1.8"
 
 group :development do
   gem "rack"
   gem "thin"
-  gem("nokogiri", ">= 1.5.1")
+  gem("nokogiri", ">= 1.6.6")
   gem "yard"
   gem "upton", :path => "."
   gem "rake"

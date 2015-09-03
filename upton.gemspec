@@ -22,6 +22,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'thin'
   s.add_development_dependency 'yard'
 
-  s.add_runtime_dependency "rest-client", ["~> 1.6.7"]
-  s.add_runtime_dependency 'nokogiri', [">= 1.5.1"]
+  s.add_runtime_dependency 'rest-client', '~> 1.8', '>= 1.8.0'
+  s.add_runtime_dependency 'nokogiri', '~> 1.6', '>= 1.6.6'
 end
