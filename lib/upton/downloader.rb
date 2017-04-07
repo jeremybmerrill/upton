@@ -56,6 +56,8 @@ module Upton
         puts "404 error, skipping: #{uri}" if @verbose
       rescue RestClient::InternalServerError
         puts "500 Error, skipping: #{uri}" if @verbose
+      rescue RestClient::ServiceUnavailable
+        puts "503 Error, skipping: #{uri}" if @verbose
       rescue URI::InvalidURIError
         puts "Invalid URI: #{uri}" if @verbose
       rescue RestClient::RequestTimeout
@@ -141,7 +143,7 @@ module Upton
     end
 
     def initialize_cache!
-      unless Dir.exists?(cache_location)
+      unless Dir.exist?(cache_location)
         Dir.mkdir(cache_location)
         FileUtils.chmod 0700, cache_location
       end
