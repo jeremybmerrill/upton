@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 1.9.2" 
   s.license     = 'MIT'
   s.homepage    =
-    'http://github.org/propublica/upton'
+    'http://github.org/jeremybmerrill/upton'
 
   s.add_development_dependency 'rack'
   s.add_development_dependency 'rspec'
